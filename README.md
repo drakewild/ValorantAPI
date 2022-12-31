@@ -13,7 +13,7 @@ This library allows you to make custom requests to Valorant Client API endpoints
 ## Usage/Examples
 
 Get PUUID from local endpoint
-```
+```csharp
 using ValorantAPI;
 using Newtonsoft.Json;
 internal class Program{
@@ -34,7 +34,7 @@ internal class Program{
 ```
 
 Get data from GLZ endpoint
-```
+```csharp
 static async void getData(){
     var data = Newtonsoft.Json.Linq.JObject.Parse(await client.Request(ValorantClient.REQUEST.GET, 
                 $"/parties/v1/players/{PUUID}", ValorantClient.ENDPOINT.E_GLZ))
